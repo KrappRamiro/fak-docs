@@ -1,0 +1,7 @@
+# Autores del blog.
+# https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#adding-authors
+authors:
+  krapp:
+    name: Ramiro Krapp
+    description: Hola! Soy Ramiro Krapp, llevo adelante FAK para poder hacer cosas de domótica y automatización. Es divertido, pero dificil :)
+    avatar: https://avatars.githubusercontent.com/u/83929485

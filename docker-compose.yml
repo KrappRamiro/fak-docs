@@ -1,0 +1,26 @@
+services:
+  docs:
+    build: .
+    image: fak-docs:local
+    container_name: fak-docs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/docs
+    # El entrypoint de la imagen oficial es `mkdocs`.
+    # Esto equivale a `mkdocs serve --dev-addr=0.0.0.0:8000`
+    command: serve --dev-addr=0.0.0.0:8000
+    healthcheck:
+      test: [
+          "CMD",
+          "wget",
+          "--no-verbose",
+          "--tries=1",
+          "--spider", # --spider le dice a wget que no descargue el contenido, solo verifique que el servidor responde
+          "http://127.0.0.1:8000/",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped

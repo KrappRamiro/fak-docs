@@ -1,6 +1,8 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: FAK Docs
 site_url: https://fak-docs.krapp.dev
 site_description: Documentación del proyecto FAK
+site_author: Krapp Ramiro
 
 nav:
   - Inicio: index.md

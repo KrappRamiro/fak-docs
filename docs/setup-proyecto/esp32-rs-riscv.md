@@ -163,7 +163,7 @@ eval "$(devenv direnvrc)"
 use devenv
 ```
 
-## Template de ESP IDF
+## Scaffoldear el proyecto usando el template de ESP-IDF
 
 Una vez creados esos archivos, corre este comando para generar el proyecto de Rust
 

@@ -6,6 +6,10 @@ site_author: Krapp Ramiro
 
 nav:
   - Inicio: index.md
+  - MQTT:
+    - Organización Topicos: mqtt/organizacion-topicos.md
+    - Conexión al Broker: mqtt/conexion.md
+    - ACL: mqtt/acl.md
   - Blog: blog/index.md
 
 theme:

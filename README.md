@@ -22,7 +22,7 @@ gh secret set CLOUDFLARE_API_TOKEN
 gh secret set CLOUDFLARE_ACCOUNT_ID
 ```
 
-Y luego con esto cree el DNS
+Y luego con esto cree el domain sobre el proyecto
 
 ```bash
 export CLOUDFLARE_API_TOKEN=valor_aca
@@ -33,7 +33,18 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/5ecd8a7880ec9a8fc2bd
     --data '{"name": "fak-docs.krapp.dev"}'
 ```
 
-Y con esto lo verifique
+
+Y luego el registro DNS:
+
+```bash
+curl -X POST "https://api.cloudflare.com/client/v4/zones/02045ad998ad3b2838c6df5d8b527fea/dns_records" \
+    -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+    -H "Content-Type: application/json" \
+    --data '{"type": "CNAME", "name": "fak-docs.krapp.dev", "content": "fak-docs.pages.dev", "proxied": true}'
+```
+
+
+Lo verifique con esto:
 
 ```bash
 curl -s "https://api.cloudflare.com/client/v4/accounts/5ecd8a7880ec9a8fc2bd6fbebd751893/pages/projects/fak-docs/domains" \

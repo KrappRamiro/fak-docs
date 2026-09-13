@@ -144,6 +144,7 @@ plugins:
   - git-committers:
       repository: KrappRamiro/fak-docs
       branch: main
+      token: !ENV [GITHUB_TOKEN]
 
   - minify:
       minify_html: true

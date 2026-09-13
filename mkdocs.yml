@@ -10,6 +10,9 @@ nav:
     - Organización Topicos: mqtt/organizacion-topicos.md
     - Conexión al Broker: mqtt/conexion.md
     - ACL: mqtt/acl.md
+  - Setup de proyecto:
+    - Con Arquitectura Xtensa: setup-proyecto/esp32-rs-xtensa.md
+    - Con Arquitectura RISC-V: setup-proyecto/esp32-rs-riscv.md
   - Blog: blog/index.md
 
 theme:

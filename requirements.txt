@@ -3,3 +3,4 @@ mkdocs-git-revision-date-localized-plugin
 mkdocs-glightbox
 # Avatares de quién editó cada página
 mkdocs-git-committers-plugin-2
+mkdocs-minify-plugin
